@@ -14,7 +14,7 @@
     <img src="images/logo.png" alt="Logo" width="100" height="80">
   </a>
 
-<h3 align="center">Constant Sum Automated Market Maker</h3>
+<h3 align="center">Constant Product Automated Market Maker</h3>
 
   <p align="center">
     A very simple consant sum AMM 
