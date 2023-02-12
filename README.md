@@ -162,7 +162,7 @@ XY = K
         (x + dx)(y + dy) = k'
 ```
 
-        No price change, before and after adding liquidity
+**No price change, before and after adding liquidity**
 
 ```sh
         x / y = (x + dx) / (y + dy)
@@ -186,7 +186,7 @@ XY = K
         s = shares to mint
 ```
 
-        Total shares should increase proportional to increase in liquidity
+**Total shares should increase proportional to increase in liquidity**
 
 ```sh
         L1 / L0 = (T + s) / T
