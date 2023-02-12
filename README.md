@@ -197,12 +197,12 @@ XY = K
 ```
 
 ```sh
-        Claim
+Claim
         (L1 - L0) / L0 = dx / x = dy / y
 ```
 
 ```sh
-        Proof
+Proof
         --- Equation 1 ---
         (L1 - L0) / L0 = (sqrt((x + dx)(y + dy)) - sqrt(xy)) / sqrt(xy)
 
@@ -242,7 +242,7 @@ XY = K
 
 ```sh
 
-        Proof
+Proof
         Let's find dx, dy such that
         v / L = s / T
 
