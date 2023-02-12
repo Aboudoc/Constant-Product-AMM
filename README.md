@@ -238,6 +238,9 @@ XY = K
         dx, dy = amount of liquidity to remove
         dx = s / T * x
         dy = s / T * y
+```
+
+```sh
 
         Proof
         Let's find dx, dy such that
