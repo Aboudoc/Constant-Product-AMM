@@ -179,7 +179,7 @@ Simplify the equation:
 ### Remove liquidity - How many tokens to withdraw?
 
 <div>
- <img src="images/Maths09.png" alt="Maths">
+ <img src="images/Maths09bis.png" alt="Maths">
 </div>
 
 ## Note
