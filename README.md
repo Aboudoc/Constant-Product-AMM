@@ -60,8 +60,6 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://ethereum.org/en/developers/docs/smart-contracts/security/)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
@@ -132,49 +130,23 @@ Constant product AMM (automated market maker) is a decentralized exchange where 
 
 ## Why is it called constant product?
 
-The price of the tokens are determined by a mathematical equation
-
-```sh
-X = amount of token A in the contract
-Y = amount of token B in the contract
-K = a constant that satisfies the following equation
-
-XY = K
-
-```
+<div>
+ <img src="images/Maths01.png" alt="Maths">
+</div>
 
 ### Swap - How many dy for dx?
 
-```sh
-        xy = k
-        (x + dx)(y - dy) = k
-        y - dy = k / (x + dx)
-        y - k / (x + dx) = dy
-        y - xy / (x + dx) = dy
-        (yx + ydx - xy) / (x + dx) = dy
-        ydx / (x + dx) = dy
-```
+<div>
+ <img src="images/Maths02.png" alt="Maths">
+</div>
 
 ### Add liquidity - How many dx, dy to add?
 
-```sh
-        xy = k
-        (x + dx)(y + dy) = k'
-```
+<div>
+ <img src="images/Maths03.png" alt="Maths">
+</div>
 
-**No price change, before and after adding liquidity**
-
-```sh
-        x / y = (x + dx) / (y + dy)
-
-        x(y + dy) = y(x + dx)
-        x * dy = y * dx
-
-        x / y = dx / dy
-        dy = y / x * dx
-```
-
-### Add liquidity - How many shares to mint?
+#### Add liquidity - How many shares to mint?
 
 ```sh
         f(x, y) = value of liquidity
