@@ -161,7 +161,7 @@ Motivation:
 What is L0 and L1
 
 <div>
- <img src="images/Maths06.png" alt="Maths">
+ <img src="images/Maths06bis.png" alt="Maths">
 </div>
 
 Simplify the equation:
