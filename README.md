@@ -148,99 +148,39 @@ Constant product AMM (automated market maker) is a decentralized exchange where 
 
 #### Add liquidity - How many shares to mint?
 
-```sh
-        f(x, y) = value of liquidity
-        We will define f(x, y) = sqrt(xy)
+<div>
+ <img src="images/Maths04.png" alt="Maths">
+</div>
 
-        L0 = f(x, y)
-        L1 = f(x + dx, y + dy)
-        T = total shares
-        s = shares to mint
-```
+Motivation:
 
-**Total shares should increase proportional to increase in liquidity**
+<div>
+ <img src="images/Maths05.png" alt="Maths">
+</div>
 
-```sh
-        L1 / L0 = (T + s) / T
+What is L0 and L1
 
-        L1 * T = L0 * (T + s)
+<div>
+ <img src="images/Maths06.png" alt="Maths">
+</div>
 
-        (L1 - L0) * T / L0 = s
-```
+Simplify the equation:
 
-```sh
-Claim
-        (L1 - L0) / L0 = dx / x = dy / y
-```
+<div>
+ <img src="images/Maths07.png" alt="Maths">
+</div>
 
-```sh
-Proof
-        --- Equation 1 ---
-        (L1 - L0) / L0 = (sqrt((x + dx)(y + dy)) - sqrt(xy)) / sqrt(xy)
+**Conclusion**
 
-        dx / dy = x / y so replace dy = dx * y / x
-
-        --- Equation 2 ---
-        Equation 1 = (sqrt(xy + 2ydx + dx^2 * y / x) - sqrt(xy)) / sqrt(xy)
-
-        Multiply by sqrt(x) / sqrt(x)
-        Equation 2 = (sqrt(x^2y + 2xydx + dx^2 * y) - sqrt(x^2y)) / sqrt(x^2y)
-                   = (sqrt(y)(sqrt(x^2 + 2xdx + dx^2) - sqrt(x^2)) / (sqrt(y)sqrt(x^2))
-
-        sqrt(y) on top and bottom cancels out
-
-        --- Equation 3 ---
-        Equation 2 = (sqrt(x^2 + 2xdx + dx^2) - sqrt(x^2)) / (sqrt(x^2)
-        = (sqrt((x + dx)^2) - sqrt(x^2)) / sqrt(x^2)
-        = ((x + dx) - x) / x
-        = dx / x
-
-        Since dx / dy = x / y,
-        dx / x = dy / y
-
-        Finally
-        (L1 - L0) / L0 = dx / x = dy / y
-
-```
+<div>
+ <img src="images/Maths08.png" alt="Maths">
+</div>
 
 ### Remove liquidity - How many tokens to withdraw?
 
-```sh
- Claim
-        dx, dy = amount of liquidity to remove
-        dx = s / T * x
-        dy = s / T * y
-```
-
-```sh
-
-Proof
-        Let's find dx, dy such that
-        v / L = s / T
-
-        where
-        v = f(dx, dy) = sqrt(dxdy)
-        L = total liquidity = sqrt(xy)
-        s = shares
-        T = total supply
-
-        --- Equation 1 ---
-        v = s / T * L
-        sqrt(dxdy) = s / T * sqrt(xy)
-
-        Amount of liquidity to remove must not change price so
-        dx / dy = x / y
-
-        replace dy = dx * y / x
-        sqrt(dxdy) = sqrt(dx * dx * y / x) = dx * sqrt(y / x)
-
-        Divide both sides of Equation 1 with sqrt(y / x)
-        dx = s / T * sqrt(xy) / sqrt(y / x)
-           = s / T * sqrt(x^2) = s / T * x
-
-        Likewise
-        dy = s / T * y
-```
+<div>
+ <img src="images/Maths09.png" alt="Maths">
+</div>
 
 ## Note
 
