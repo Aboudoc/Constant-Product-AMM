@@ -60,6 +60,10 @@
 
 ## About The Project
 
+This project shows a basic Constant Product Automated Market Maker.
+
+You will also find all the Maths used in Uniswap V2 and Uniswap V3
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
