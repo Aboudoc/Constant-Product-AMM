@@ -124,7 +124,7 @@ If you need testnet funds, use the [Alchemy testnet faucet](https://goerlifaucet
 
 **This project shows a basic example of Constant Product AMM**
 
-## Constant sum AMM
+## Constant product AMM
 
 Constant product AMM (automated market maker) is a decentralized exchange where 2 tokens are traded.
 
@@ -149,7 +149,7 @@ Constant product AMM (automated market maker) is a decentralized exchange where 
 #### Add liquidity - How many shares to mint?
 
 <div>
- <img src="images/Maths04.png" alt="Maths">
+ <img src="images/Maths04bis.png" alt="Maths">
 </div>
 
 Motivation:
@@ -182,6 +182,50 @@ Simplify the equation:
  <img src="images/Maths09bis.png" alt="Maths">
 </div>
 
+## Time Weighted Average Price
+
+<div>
+ <img src="images/Maths10.png" alt="Maths">
+</div>
+
+### How do we compute the Time Weighted Average Price from Tk to Tn?
+
+<div>
+ <img src="images/Maths11.png" alt="Maths">
+</div>
+
+## Constant Product AMM Spot Price
+
+<div>
+ <img src="images/Maths12.png" alt="Maths">
+</div>
+
+### P = Y / X from geometry
+
+<div>
+ <img src="images/Maths13.png" alt="Maths">
+</div>
+
+### P = Y / X from calculus
+
+<div>
+ <img src="images/Maths14.png" alt="Maths">
+</div>
+
+## Constant Product AMM Spot Price Examples
+
+### Uniswap V2
+
+<div>
+ <img src="images/Maths15.png" alt="Maths">
+</div>
+
+### Uniswap V3
+
+<div>
+ <img src="images/Maths16.png" alt="Maths">
+</div>
+
 ## Note
 
 This contract assumes that token0 and token1 both have same decimals
@@ -200,6 +244,7 @@ Consider fees = 3%
 
 ## Roadmap
 
+- [ ] Uniswap V3 TWAP
 - [ ] Further reading
 - [ ] Deploy script
 - [ ] Unit test
