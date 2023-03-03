@@ -117,6 +117,15 @@ To get a local copy up and running follow these simple example steps.
    ```sh
    npm install
    ```
+3. Dependencies
+
+```sh
+npm i @uniswap/v2-core
+```
+
+```sh
+npm i @uniswap/v2-periphery
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -231,12 +240,17 @@ Since we're using Solidity 0.6, constructor must be declared as `public`
    The expression below, used to calculate the price averages, is the exact same equation that we derived from `How do we compute the Time Weighted Average Price from Tk to Tn?`
 
    ```js
-
+   price0Average = FixedPoint.uq112x112(
+     uint224((price0Cumulative - price0CumulativeLast) / timeElapsed)
+   );
+   price1Average = FixedPoint.uq112x112(
+     uint224((price1Cumulative - price1CumulativeLast) / timeElapsed)
+   );
    ```
 
    **Keep in mind that we don't care if the numbers overflows** This is why we are not using `SafeMath`
 
-4. Finally, update the state variables: `price0CumulativeLast`, `price1CumulativeLast` and `blockTimeStampLast`
+4. Finally, update the state variables: `price0CumulativeLast`, `price1CumulativeLast` and `blockTimestampLast`
 
 ### Function consult
 
