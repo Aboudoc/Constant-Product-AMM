@@ -17,7 +17,7 @@
 <h3 align="center">Constant Product Automated Market Maker</h3>
 
   <p align="center">
-    A very simple consant sum AMM 
+    A basic Constant Product AMM 
     <br />
     <a href="https://github.com/Aboudoc/Constant-Product-AMM"><strong>Explore the docs »</strong></a>
     <br />
