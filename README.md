@@ -198,6 +198,53 @@ Simplify the equation:
  <img src="images/Maths11.png" alt="Maths">
 </div>
 
+## Uniswap V2 Price Oracle
+
+We saw the math to calculate TWAP, you can also calculate it in Uniswap V2 using Solidity.
+
+This is the purpose of `UniswapV2Twap` contract
+
+In Uniswap V2, the numbers are represented in decimals, but Solidity does not have any decimal datatypes, so we'ell be using `FixedPoint.sol` library
+
+The datatype `FixedPoint.uq112x112` represents a decimal number as follows:
+
+range: [0, 2e112 - 1]
+resolution: 1 / 2e112
+
+The `IUniswapV2Pair` contract is the pair contract that holds the two tokens and does the swaps
+
+### Constructor
+
+Since we're using Solidity 0.6, constructor must be declared as `public`
+
+1. We set the pair first
+2. We set `token0` and `token1` from `pair`
+3. We record `price0CumulativeLast` and `price1CumulativeLast` and the last time that these variables were updated: `blockTimestampLast` using `getReserves()`, it returns 3 outputs but we only need the third
+
+### Function update
+
+1. To get the current `price0Cumulative`, current `price1Cumulative` and `blockTimestamp`, we call `currentCumulativePrices()` on `UniswapV2OracleLibrary` by passing in the address of the pair
+2. Calculate how much time has elapsed since the last time we called `update()`. This time elapsed must be greather than the `period` defined as state variable
+3. Calculate the price averages (`price0Average` and `price1Average`) by taking the current price cumulative, substracting it from the last price cumulative, and dividing it over the time elapsed. Cast it into a `FixedPoint`
+   => Note that `up112x112` is a struct and the input for this struct must be a `uint224` => cast the calcul expression
+
+The expression below, used to calculate the price averages, is the exact same equation that we derived from `How do we compute the Time Weighted Average Price from Tk to Tn?`
+
+```js
+
+```
+
+**Keep in mind that we don't care if the numbers overflows** This is why we are not using `SafeMath`
+
+4. Finally, update the state variables: `price0CumulativeLast`, `price1CumulativeLast` and `blockTimeStampLast`
+
+### Function consult
+
+Giving the token and the amount of token put in, this function will calculate the amount out using the `price0Average` and `price1Average`
+
+1. The token must be token0 or token1
+2. Compute `amountOut`using `price0Average` and `amountIn` argument (.mul). We have to put it back to uint using a function called `decode144()`
+
 ## Constant Product AMM Spot Price
 
 <div>
