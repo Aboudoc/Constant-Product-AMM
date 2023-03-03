@@ -119,13 +119,9 @@ To get a local copy up and running follow these simple example steps.
    ```
 3. Dependencies
 
-```sh
-npm i @uniswap/v2-core
-```
-
-```sh
-npm i @uniswap/v2-periphery
-```
+   ```sh
+   npm i @uniswap/v2-core @uniswap/v2-periphery
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
