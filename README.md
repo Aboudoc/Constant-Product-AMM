@@ -228,13 +228,13 @@ Since we're using Solidity 0.6, constructor must be declared as `public`
 3. Calculate the price averages (`price0Average` and `price1Average`) by taking the current price cumulative, substracting it from the last price cumulative, and dividing it over the time elapsed. Cast it into a `FixedPoint`
    => Note that `up112x112` is a struct and the input for this struct must be a `uint224` => cast the calcul expression
 
-The expression below, used to calculate the price averages, is the exact same equation that we derived from `How do we compute the Time Weighted Average Price from Tk to Tn?`
+   The expression below, used to calculate the price averages, is the exact same equation that we derived from `How do we compute the Time Weighted Average Price from Tk to Tn?`
 
-```js
+   ```js
 
-```
+   ```
 
-**Keep in mind that we don't care if the numbers overflows** This is why we are not using `SafeMath`
+   **Keep in mind that we don't care if the numbers overflows** This is why we are not using `SafeMath`
 
 4. Finally, update the state variables: `price0CumulativeLast`, `price1CumulativeLast` and `blockTimeStampLast`
 
@@ -379,3 +379,7 @@ Project Link: [https://github.com/Aboudoc/Constant-Product-AMM.git](https://gith
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com
+
+```
+
+```
