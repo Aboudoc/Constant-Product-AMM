@@ -238,7 +238,7 @@ Since we're using Solidity 0.6, constructor must be declared as `public`
 
 4. Finally, update the state variables: `price0CumulativeLast`, `price1CumulativeLast` and `blockTimeStampLast`
 
-### Function consult
+### Function consult
 
 Giving the token and the amount of token put in, this function will calculate the amount out using the `price0Average` and `price1Average`
 
