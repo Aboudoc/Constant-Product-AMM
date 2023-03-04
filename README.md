@@ -340,7 +340,7 @@ The `Tick` that is used to compute the current price is tracked in Uni V3
     (int24 tick, ) = OracleLibrary.consult(pool, secondsAgo);
 ```
 
-    We'll copy paste the code to compute `tick` directly from the library to **save some gas**
+    We'll copy paste the code to compute `tick` directly from the library to ***save some gas***
 
 3. Call `GetQuoteAtTick` on `OracleLibrary` to get the `amountOut`
 
