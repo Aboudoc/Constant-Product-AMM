@@ -49,6 +49,11 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#Constant-Product-AMM">Constant Product AMM</a></li>
+    <li><a href="#Time-Weighted-Average-Price">Time Weighted Average Price</a></li>
+    <li><a href="#Uniswap-V2-Price-Oracle">Uniswap V2 Price Oracle</a></li>
+    <li><a href="#Constant-Product-AMM-Spot-Price-Examples">Constant Product AMM Spot Price Examples</a></li>
+    <li><a href="#Uniswap-V3-Price-Oracle">Uniswap V3 Price Oracle</a></li>
+    <li><a href="#Geometric-Mean">Geometric Mean</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -208,6 +213,8 @@ Simplify the equation:
  <img src="images/Maths11.png" alt="Maths">
 </div>
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Uniswap V2 Price Oracle
 
 We saw the math to calculate TWAP, you can also calculate it in Uniswap V2 using Solidity.
@@ -264,6 +271,8 @@ Giving the token and the amount of token put in, this function will calculate th
 
 - Twap: 0x321C105b714847Bd40513c91d89028FaF7F38692
 - pair: 0x28cee28a7C4b4022AC92685C07d2f33Ab1A0e122
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Constant Product AMM Spot Price
 
@@ -323,6 +332,8 @@ The `Tick` that is used to compute the current price is tracked in Uni V3
  <img src="images/Maths20.png" alt="Maths">
 </div>
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Uniswap V3 Price Oracle
 
 ### Constructor
@@ -378,7 +389,11 @@ npx hardhat node --fork https://eth-mainnet.g.alchemy.com/v2/$ALCHEMY_API_KEY
 npx hardhat test --network localhost
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Geometric Mean
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Note
 
