@@ -107,6 +107,12 @@ To get a local copy up and running follow these simple example steps.
   npx hardhat
   ```
 
+  verify:
+
+  ```sh
+  npx hardhat verify --network goerli "contract address" "pair address"
+  ```
+
 ### Installation
 
 1. Clone the repo
@@ -255,6 +261,11 @@ Giving the token and the amount of token put in, this function will calculate th
 1. The token must be token0 or token1
 2. Compute `amountOut`using `price0Average` and `amountIn` argument (.mul). We have to put it back to uint using a function called `decode144()`
 
+### Goerli
+
+- Twap: 0x321C105b714847Bd40513c91d89028FaF7F38692
+- pair: 0x28cee28a7C4b4022AC92685C07d2f33Ab1A0e122
+
 ## Constant Product AMM Spot Price
 
 <div>
@@ -285,6 +296,32 @@ Giving the token and the amount of token put in, this function will calculate th
 
 <div>
  <img src="images/Maths16.png" alt="Maths">
+</div>
+
+## Uniswap V3 Twap
+
+<div>
+ <img src="images/Maths17.png" alt="Maths">
+</div>
+
+However, virtual reserves are not tracked in Uni V3
+
+The `Tick` that is used to compute the current price is tracked in Uni V3
+
+<div>
+ <img src="images/Maths18.png" alt="Maths">
+</div>
+
+### Example
+
+<div>
+ <img src="images/Maths19.png" alt="Maths">
+</div>
+
+### Pricing difference between Uni V2 and Uni V3
+
+<div>
+ <img src="images/Maths20.png" alt="Maths">
 </div>
 
 ## Note
