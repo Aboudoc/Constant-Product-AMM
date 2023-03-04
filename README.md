@@ -48,7 +48,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#Constant">Constant Product AMM</a></li>
+    <li><a href="#Constant-Product-AMM">Constant Product AMM</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -139,6 +139,8 @@ If you need testnet funds, use the [Alchemy testnet faucet](https://goerlifaucet
 ## Constant Product AMM
 
 Constant product AMM (automated market maker) is a decentralized exchange where 2 tokens are traded.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Why is it called constant product?
 
