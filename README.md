@@ -330,11 +330,13 @@ The `Tick` that is used to compute the current price is tracked in Uni V3
 
 1. Set `token0` and `token1`
 2. get the pool by calling `getPool()` on, `IUniswapV3Factory` and set the state variable
+3. To call `getPool()` we need to pass in 3 parameters: address of the tokens, and the fee => set factory address and fee (uint24)
+4. Check that the pool is a valid pool (not address(0)) and finally set it (state variable)
 
 ### Function estimateAmountOut
 
 1. Define `tokenIn` and `tokenOut`
-2. Call `consult()` on `OracleLibrary` like so:
+2. Get the average tick: Call `consult()` on `OracleLibrary` like so:
 
 ```js
     (int24 tick, ) = OracleLibrary.consult(pool, secondsAgo);
@@ -342,7 +344,7 @@ The `Tick` that is used to compute the current price is tracked in Uni V3
 
 We'll copy paste the code to compute `tick` directly from the library to **_save some gas_**
 
-3. Call `GetQuoteAtTick` on `OracleLibrary` to get the `amountOut`
+3. Call `GetQuoteAtTick()` on `OracleLibrary` to set the `amountOut`
 
 ### Forking mainnet
 
