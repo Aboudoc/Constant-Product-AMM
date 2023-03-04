@@ -48,6 +48,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#Constant Product AMM">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -74,10 +75,6 @@ You will also find all the Maths used in Uniswap V2 and Uniswap V3
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
-
-## Getting Started
-
-To get a local copy up and running follow these simple example steps.
 
 ## Getting Started
 
@@ -139,7 +136,7 @@ If you need testnet funds, use the [Alchemy testnet faucet](https://goerlifaucet
 
 **This project shows a basic example of Constant Product AMM**
 
-## Constant product AMM
+## Constant Product AMM
 
 Constant product AMM (automated market maker) is a decentralized exchange where 2 tokens are traded.
 
@@ -378,6 +375,8 @@ npx hardhat node --fork https://eth-mainnet.g.alchemy.com/v2/$ALCHEMY_API_KEY
 ```sh
 npx hardhat test --network localhost
 ```
+
+## Geometric Mean
 
 ## Note
 
