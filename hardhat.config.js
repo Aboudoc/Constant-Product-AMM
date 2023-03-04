@@ -7,7 +7,11 @@ const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 
 module.exports = {
   solidity: {
-    compilers: [{ version: "0.8.17" }, { version: "0.6.6" }],
+    compilers: [
+      { version: "0.8.17" },
+      { version: "0.6.6" },
+      { version: "0.7.6" },
+    ],
   },
   dafaultNetwork: "localhost",
   etherscan: {
