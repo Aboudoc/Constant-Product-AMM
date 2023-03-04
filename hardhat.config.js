@@ -1,7 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
 
-const MAINNET_RPC_URL = process.env.MAINNET_RPC_URL;
+const ALCHEMY_API_KEY = process.env.ALCHEMY_API_KEY;
 const GOERLI_RPC_URL = process.env.GOERLI_RPC_URL;
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
@@ -21,7 +21,7 @@ module.exports = {
   networks: {
     hardhat: {
       forking: {
-        url: MAINNET_RPC_URL,
+        url: `https://eth-mainnet.alchemyapi.io/v2/${process.env.ALCHEMY_API_KEY}`,
       },
     },
     goerli: {

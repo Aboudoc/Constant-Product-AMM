@@ -324,6 +324,59 @@ The `Tick` that is used to compute the current price is tracked in Uni V3
  <img src="images/Maths20.png" alt="Maths">
 </div>
 
+## Uniswap V3 Price Oracle
+
+### Constructor
+
+1. Set `token0` and `token1`
+2. get the pool by calling `getPool()` on, `IUniswapV3Factory` and set the state variable
+
+### Function estimateAmountOut
+
+1. Define `tokenIn` and `tokenOut`
+2. Call `consult()` on `OracleLibrary` like so:
+
+```js
+    (int24 tick, ) = OracleLibrary.consult(pool, secondsAgo);
+```
+
+    We'll copy paste the code to compute `tick` directly from the library to **save some gas**
+
+3. Call `GetQuoteAtTick` on `OracleLibrary` to get the `amountOut`
+
+### Forking mainnet
+
+`hardhat.config.js`
+
+```sh
+  networks: {
+        hardhat: {
+          forking: {
+            url: `https://eth-mainnet.alchemyapi.io/v2/${process.env.ALCHEMY_API_KEY}`,
+       },
+     },
+  }
+```
+
+`.env`
+
+```sh
+ALCHEMY_API_KEY=...
+```
+
+`terminal1`
+
+```sh
+ALCHEMY_API_KEY=...
+npx hardhat node --fork https://eth-mainnet.g.alchemy.com/v2/$ALCHEMY_API_KEY
+```
+
+`terminal2`
+
+```sh
+npx hardhat test --network localhost
+```
+
 ## Note
 
 This contract assumes that token0 and token1 both have same decimals
