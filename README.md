@@ -54,6 +54,8 @@
     <li><a href="#Constant-Product-AMM-Spot-Price-Examples">Constant Product AMM Spot Price Examples</a></li>
     <li><a href="#Uniswap-V3-Price-Oracle">Uniswap V3 Price Oracle</a></li>
     <li><a href="#Geometric-Mean">Geometric Mean</a></li>
+    <li><a href="#Uniswap-V3-TWAP-and-Geometric-Mean">Uniswap V3 TWAP and Geometric Mean</a></li>
+    <li><a href="#Uniswap-V3-TWAP-Inverse-Price">Uniswap V3 TWAP Inverse Price</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -407,6 +409,40 @@ npx hardhat test --network localhost
 
 <div>
  <img src="images/Maths23.png" alt="Maths">
+</div>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Uniswap V3 TWAP and Geometric Mean
+
+<div>
+ <img src="images/Maths24.png" alt="Maths">
+</div>
+
+<div>
+ <img src="images/Maths25.png" alt="Maths">
+</div>
+
+<div>
+ <img src="images/Maths26.png" alt="Maths">
+</div>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Uniswap V3 TWAP Inverse Price
+
+<div>
+ <img src="images/Maths27.png" alt="Maths">
+</div>
+
+### Not in Uniswap V2
+
+<div>
+ <img src="images/Maths28.png" alt="Maths">
+</div>
+
+<div>
+ <img src="images/Maths28.png" alt="Maths">
 </div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
