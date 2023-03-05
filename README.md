@@ -441,10 +441,6 @@ npx hardhat test --network localhost
  <img src="images/Maths28.png" alt="Maths">
 </div>
 
-<div>
- <img src="images/Maths28.png" alt="Maths">
-</div>
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Note
