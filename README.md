@@ -393,6 +393,22 @@ npx hardhat test --network localhost
 
 ## Geometric Mean
 
+<div>
+ <img src="images/Maths21.png" alt="Maths">
+</div>
+
+### Example
+
+<div>
+ <img src="images/Maths22.png" alt="Maths">
+</div>
+
+### Comapraison With Arithmetic Mean
+
+<div>
+ <img src="images/Maths23.png" alt="Maths">
+</div>
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Note
