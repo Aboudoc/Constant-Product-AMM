@@ -447,7 +447,7 @@ npx hardhat test --network localhost
 
 This contract assumes that token0 and token1 both have same decimals
 
-Consider fees = 3%
+Consider fees = 0.3%
 
 ### Further reading
 
