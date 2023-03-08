@@ -161,6 +161,12 @@ Constant product AMM (automated market maker) is a decentralized exchange where 
  <img src="images/Maths02.png" alt="Maths">
 </div>
 
+**Uniswap trading fee = 0.3%**
+
+<div>
+ <img src="images/Mathsfee.png" alt="Maths">
+</div>
+
 ### Add liquidity - How many dx, dy to add?
 
 <div>
