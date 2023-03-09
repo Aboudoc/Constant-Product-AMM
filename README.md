@@ -275,10 +275,9 @@ Giving the token and the amount of token put in, this function will calculate th
 1. The token must be token0 or token1
 2. Compute `amountOut`using `price0Average` and `amountIn` argument (.mul). We have to put it back to uint using a function called `decode144()`
 
-### Goerli
+### Additional Reading
 
-- Twap: 0x321C105b714847Bd40513c91d89028FaF7F38692
-- pair: 0x28cee28a7C4b4022AC92685C07d2f33Ab1A0e122
+You can find more in the following article [Using the new Uniswap v2 as oracle](https://soliditydeveloper.com/uniswap-oracle)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

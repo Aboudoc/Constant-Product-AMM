@@ -13,13 +13,28 @@ const FEE = 3000;
 // Pair
 // 0x8ad599c3A0ff1De082011EFDDc58f1908eb6e6D8
 
+describe("UniswapV2Twap", () => {
+  it("get price", async () => {
+    const UniswapV2Twap = await ethers.getContractFactory("UniswapV2Twap");
+
+    const twap = await UniswapV2Twap.deploy(
+      "0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc"
+    );
+    await twap.deployed();
+
+    const price = await twap.consult(TOKEN_1, 1);
+
+    console.log(`price: ${price}`);
+  });
+});
+
 describe("UniswapV3Twap", () => {
   it("get price", async () => {
     const UniswapV3Twap = await ethers.getContractFactory("UniswapV3Twap");
-    const twap = await UniswapV3Twap.deploy(FACTORY, TOKEN_0, TOKEN_1, FEE);
-    await twap.deployed();
+    const twap3 = await UniswapV3Twap.deploy(FACTORY, TOKEN_0, TOKEN_1, FEE);
+    await twap3.deployed();
 
-    const price = await twap.estimateAmountOut(TOKEN_1, 10n ** DECIMALS_1, 10);
+    const price = await twap3.estimateAmountOut(TOKEN_1, 10n ** DECIMALS_1, 10);
 
     console.log(`price: ${price}`);
   });
